@@ -9,7 +9,7 @@ class PPPProfile:
     address_list: str = None
     bridge_learning: YesNoDefault = "default"
     change_tcp_mss: YesNoDefault = "yes"
-    default: bool = False
+    default: bool = None
     on_down: str = None
     on_up: str = None
     only_one: YesNoDefault = "default"
