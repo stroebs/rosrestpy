@@ -1,5 +1,5 @@
 __version__ = "0.12.2"
-from .inteface import InterfaceModule
+from .interface import InterfaceModule
 from .ip import IPModule
 from .mpls import MPLSModule
 from .ppp import PPPModule

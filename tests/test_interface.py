@@ -1,12 +1,12 @@
 from ros import Ros, InterfaceModule
-from ros.inteface.bridge import BridgeModule, Bridge, BridgeMsti, BridgePort, BridgeVlan
-from ros.inteface.eoip import EoIP
-from ros.inteface.ethernet import InterfaceEthernet
-from ros.inteface.list import InterfaceListModule, InterfaceList, InterfaceListMember
-from ros.inteface.veth import Veth
-from ros.inteface.vlan import Vlan
-from ros.inteface.vrrp import Vrrp
-from ros.inteface.wireguard import WireguardModule, Wireguard
+from ros.interface.bridge import BridgeModule, Bridge, BridgeMsti, BridgePort, BridgeVlan
+from ros.interface.eoip import EoIP
+from ros.interface.ethernet import InterfaceEthernet
+from ros.interface.list import InterfaceListModule, InterfaceList, InterfaceListMember
+from ros.interface.veth import Veth
+from ros.interface.vlan import Vlan
+from ros.interface.vrrp import Vrrp
+from ros.interface.wireguard import WireguardModule, Wireguard
 
 
 class TestInterface:

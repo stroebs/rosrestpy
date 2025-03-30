@@ -9,7 +9,7 @@ from .interface import Interface
 from .list import InterfaceList, InterfaceListMember, InterfaceListModule
 from .veth import Veth
 from .vlan import Vlan
-from .wireguard import WireguardModule, Wireguard
+from .wireguard import WireguardModule
 from .vrrp import Vrrp
 
 
@@ -76,7 +76,7 @@ class InterfaceModule(BaseModule):
     def wireguard(self) -> WireguardModule:
         if not self._wireguard:
             self._wireguard = WireguardModule(
-                self.ros, "/interface/wireguard", Wireguard
+                self.ros, "/interface/wireguard", WireguardModule
             )
         return self._wireguard
 

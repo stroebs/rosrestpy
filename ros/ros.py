@@ -23,7 +23,7 @@ from . import (
 
 from . import Error, Log
 
-from .inteface import BridgeModule
+from .interface import BridgeModule
 from ._utils import clean_data, clean_filters, make_converter
 
 _converter = make_converter()
