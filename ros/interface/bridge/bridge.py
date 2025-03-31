@@ -1,31 +1,37 @@
 from attr import dataclass
+from typing import Literal
 
 from ros._literals import ARPLiteral
 
+ProtocolModeLiteral = Literal["mstp", "rstp", "stp", "none"]
+PortCostModeLiteral = Literal["long", "short"]
 
 @dataclass
 class Bridge:
     name: str
-    arp: ARPLiteral
-    ageing_time: str
-    arp_timeout: str
-    auto_mac: bool
-    dhcp_snooping: bool
-    disabled: bool
-    fast_forward: bool
-    forward_delay: str
-    igmp_snooping: bool
-    mac_address: str
-    max_message_age: str
-    mtu: str
-    priority: str
-    protocol_mode: str
-    running: bool
-    transmit_hold_count: int
-    vlan_filtering: bool
+    arp: ARPLiteral = "enabled"
+    ageing_time: str = "5m"
+    mtu: str = None
+    arp_timeout: str = None
+    auto_mac: bool = True
+    dhcp_snooping: bool = False
+    igmp_snooping: bool = False
+    admin_mac: str = None
+    disabled: bool = None
+    fast_forward: bool = True
+    priority: str = "0x8000"
+    protocol_mode: ProtocolModeLiteral = "rstp"
+    port_cost_mode: PortCostModeLiteral = "long"
+    max_message_age: str = "20s"
+    forward_delay: str = "15s"
+    transmit_hold_count: int = 6
+    max_hops: int = 20
+    vlan_filtering: bool = False
+    comment: str = None
+    mac_address: str = None
     actual_mtu: int = None
     l2mtu: int = None
-    comment: str = None
+    running: bool = None
     id: str = None
 
     def __str__(self) -> str:
