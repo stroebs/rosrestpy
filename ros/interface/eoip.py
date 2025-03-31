@@ -12,7 +12,7 @@ MTULiteral = Union[str, int]
 class EoIP:
     name: str
     remote_address: str = "0.0.0.0"
-    tunnel_id = 0
+    tunnel_id: int = 0
     arp: ARPLiteral = "enabled"
     arp_timeout: str = None
     allow_fast_path: bool = True
@@ -32,7 +32,7 @@ class EoIP:
     id: str = None
     l2mtu: int = None
     copy_from: str = None
-    running: bool = False
+    running: bool = None
 
     def __str__(self) -> str:
         return self.name
